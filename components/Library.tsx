@@ -65,9 +65,11 @@ const Library = () => {
       </div>
       <div>
         <Box className="h-120">
-          <div className="flex p-6 items-center text-bold ">
+          <div className="cursor-pointer flex p-6 items-center text-bold ">
             <BiSearch size={20} />
-            <h2 className="ml-[17rem]">Recents</h2>
+            <h2 className="ml-[17rem] text-[15px] text-neutral-500 hover:text-white font-medium">
+              Recents
+            </h2>
           </div>
         </Box>
       </div>

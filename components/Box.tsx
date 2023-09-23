@@ -8,12 +8,15 @@ interface Boxprops {
 const Box: React.FC<Boxprops> = ({ children, className }) => {
   return (
     <div
-      className={twMerge(`
+      className={twMerge(
+        `
   bg-neutral-900
   rounded-lg
   w-full
   h-fit
-  `)}
+  `,
+        className
+      )}
     >
       {children}
     </div>
