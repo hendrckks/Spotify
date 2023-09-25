@@ -9,6 +9,9 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import Greetings from "./Greetings";
 import PlaylistTiles from "./PlaylistTiles";
 import Button from "./Button";
+import Tile from "./Tile";
+import Image from "next/image";
+import LIKED from "../public/images/liked.png";
 
 interface HeaderProps {
   children: React.ReactNode;
@@ -79,9 +82,21 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
         </div>
       </div>
       <Greetings />
-      <PlaylistTiles />
+      <PlaylistTiles>
+        <Tile>
+          <div className="flex">
+            <div className="w-[84px] h-full">
+              <Image src={LIKED} alt="img" className="w-full h-full" />
+            </div>
+            <div className="relative flex items-center justify-center px-5">
+              <h2>Liked Songs</h2>
+            </div>
+          </div>
+        </Tile>
+      </PlaylistTiles>
     </div>
   );
 };
 
 export default Header;
+64;
