@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
@@ -10,8 +11,10 @@ import Greetings from "./Greetings";
 import PlaylistTiles from "./PlaylistTiles";
 import Button from "./Button";
 import Tile from "./Tile";
-import Image from "next/image";
+
 import LIKED from "../public/images/liked.png";
+
+import { FaPlay } from "react-icons/fa";
 
 interface HeaderProps {
   children: React.ReactNode;
@@ -36,6 +39,8 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
     height: "30px",
     fontsize: "20px",
   };
+
+  const name = "Liked Songs";
 
   return (
     <div className="bg-gradient-to-b from-emerald-800 ">
@@ -84,13 +89,32 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
       <Greetings />
       <PlaylistTiles>
         <Tile>
-          <div className="flex">
+          <div className="flex w-full">
             <div className="w-[84px] h-full">
               <Image src={LIKED} alt="img" className="w-full h-full" />
             </div>
             <div className="relative flex items-center justify-center px-5">
-              <h2>Liked Songs</h2>
+              <h2>{name}</h2>
             </div>
+          </div>
+          <div
+            className="absolute flex items-center justify-center
+            right-7
+            "
+          >
+            <button
+              className="bg-emerald-500
+            rounded-full
+            p-4
+            opacity-0
+            group-hover:opacity-100
+            group-hover:scale-110
+            transition 
+            text-black
+            "
+            >
+              <FaPlay />
+            </button>
           </div>
         </Tile>
       </PlaylistTiles>
@@ -99,4 +123,3 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
 };
 
 export default Header;
-64;

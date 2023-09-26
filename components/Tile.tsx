@@ -23,6 +23,7 @@ const Tile: React.FC<Tileprops> = ({ children, className }) => {
         md:w-full
         sm:w-full
       "
+        name="Liked Songs"
       >
         {children}
       </button>
