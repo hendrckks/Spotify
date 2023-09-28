@@ -13,11 +13,10 @@ import Button from "./Button";
 import Tile from "./Tile";
 
 import LIKED from "../public/images/liked.png";
-
-import { FaPlay } from "react-icons/fa";
+import PlayButton from "./PlayButton";
 
 interface HeaderProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }
 
@@ -75,11 +74,9 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
              hover:text-black 
              hover:opacity-80"
             >
-              <h3>SignUp</h3>
+              SignUp
             </Button>
-            <Button className="bg-white px-5">
-              <h3>Login</h3>
-            </Button>
+            <Button className="bg-white px-5">Login</Button>
           </div>
           <button className="bg-neutral-900 rounded-full p-1">
             <PersonOutlineIcon style={iconStyle} />
@@ -102,19 +99,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
             right-7
             "
           >
-            <button
-              className="bg-emerald-500
-            rounded-full
-            p-4
-            opacity-0
-            group-hover:opacity-100
-            group-hover:scale-110
-            transition 
-            text-black
-            "
-            >
-              <FaPlay />
-            </button>
+            <PlayButton />
           </div>
         </Tile>
       </PlaylistTiles>

@@ -19,9 +19,7 @@ export default function Home() {
         xl:grid-cols-3 
         2xl:grid-cols-4 
         gap-3 "
-      >
-        hello
-      </Header>
+      />
     </div>
   );
 }
