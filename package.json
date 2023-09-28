@@ -15,5 +15,8 @@
     "@mui/material": "^5.14.10",
     "react-icons": "^4.11.0",
     "tailwind-merge": "^1.14.0"
+  },
+  "devDependencies": {
+    "supabase": "^1.99.5"
   }
 }
