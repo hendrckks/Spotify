@@ -22,6 +22,7 @@ const Tile: React.FC<Tileprops> = ({ children, className }) => {
         lg:h-[84px]
         md:w-full
         sm:w-full
+        m-sm:w-full
       "
       >
         {children}

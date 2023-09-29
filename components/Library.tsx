@@ -19,7 +19,7 @@ const Library = () => {
         className="
       ml-3
       items-center
-      w-full 
+      w-full
       gap-x-3
       cursor-pointer 
       inline-flex

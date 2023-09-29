@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
   const name = "Liked Songs";
 
   return (
-    <div className="bg-gradient-to-b from-emerald-800 ">
+    <div className="bg-gradient-to-b from-emerald-800 caret-transparent">
       <div className="flex justify-between p-6">
         <div className="flex gap-x-4 items-center">
           <button
@@ -85,6 +85,40 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
       </div>
       <Greetings />
       <PlaylistTiles>
+        <Tile>
+          <div className="flex w-full">
+            <div className="w-[84px] h-full">
+              <Image src={LIKED} alt="img" className="w-full h-full" />
+            </div>
+            <div className="relative flex items-center justify-center px-5">
+              <h2>{name}</h2>
+            </div>
+          </div>
+          <div
+            className="absolute flex items-center justify-center
+            right-7
+            "
+          >
+            <PlayButton />
+          </div>
+        </Tile>
+        <Tile>
+          <div className="flex w-full">
+            <div className="w-[84px] h-full">
+              <Image src={LIKED} alt="img" className="w-full h-full" />
+            </div>
+            <div className="relative flex items-center justify-center px-5">
+              <h2>{name}</h2>
+            </div>
+          </div>
+          <div
+            className="absolute flex items-center justify-center
+            right-7
+            "
+          >
+            <PlayButton />
+          </div>
+        </Tile>
         <Tile>
           <div className="flex w-full">
             <div className="w-[84px] h-full">
