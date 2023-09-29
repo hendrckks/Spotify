@@ -43,7 +43,7 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
         flex-col
         gap-y-2
         bg-black
-        h-auto
+        h-full
         w-[555px]
         p-2
         "
