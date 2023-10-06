@@ -1,3 +1,4 @@
+import AlbumCard from "@/components/AlbumCard";
 import Header from "@/components/Header";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
   "
     >
       <Header />
+      <AlbumCard />
     </div>
   );
 }
