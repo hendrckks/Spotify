@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
-interface iconprops {
-  className?: string;
-}
-
 interface SideBarIteProps {
   icon: any;
   label: string;
